@@ -14,15 +14,26 @@
 </body>
 <script>
     // handeler and timeOut
- setInterval(function(){   ///      its take refrence 
-    console.log(Date.now());
- })
+//  setInterval(function(){   ///      its take refrence 
+//     console.log( "Hitesh", Date.now());
+//  })
 
 
-    // const sayDate = function(str){
-    //     console.log(str,Date.now())
+    const sayDate = function(str){
+        console.log(str,Date.now())
 
-    // }
-    // setInterval(sayDate,1000, "h1")
+    }
+    const intervalId = setInterval(sayDate,1000, "h1")
+    document.querySelector("#start").addEventListener('click', function(e){
+        console.log(e.target);
+        clearInterval(intervalId)
+    })
+
+    document.querySelector("#stop").addEventListener('click', function(e){
+        console.log(e.target);
+        
+
+    })
+    
 </script>
 </html>
